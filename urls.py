@@ -1,0 +1,28 @@
+from django.conf.urls import url
+from . import views
+urlpatterns = [
+    url(r'^register', views.register, name="register"),
+    url(r'^login', views.login , name="login"),
+    url(r'^dashboard/home', views.dashboard , name="timeline"),
+    url(r'^dashboard/follower', views.follower , name="follower"),
+    url(r'^dashboard/following', views.following , name="following"),
+ #   url(r'^dashboard/profile', views.profile , name="profile"),
+    url(r'^dashboard/tweets', views.tweets , name="tweets"),
+    url(r'^public_page', views.public_page, name='public_page'),
+    url(r'^dashboard/search', views.search , name="search"),
+ #   url(r'^dashboard/usershow/$', views.usershow, name='usershow'),
+    url(r'^dashboard/followaction/$', views.followaction, name='followaction'),
+    url(r'^dashboard/unfollowaction/$', views.unfollowaction, name='unfollowaction'),
+    url(r'^dashboard/deltweet/$', views.deltweet, name='deltweet'),
+    url(r'^dashboard/like_post/$', views.like_post, name='like_post'),
+    url(r'^dashboard/share_action/$', views.share_action, name='share_action'),
+    url(r'^dashboard/addtweet', views.addtweet, name='addtweet'),
+  #  url(r'^dashboard/changeinfo', views.changeinfo, name='changeinfo'),
+    url(r'^dashboard/hashtag', views.search_hashtag, name='search_hashtag'),
+    url(r'^dashboard/useful_hashtag', views.useful_hashtag, name='useful_hashtag'),
+    url(r'^dashboard/log_page', views.log_page, name='log_page'),
+    url(r'^dashboard/likelog', views.likelog, name='likelog'),
+    url(r'^dashboard/followlog', views.followlog, name='followlog'),
+    url(r'^dashboard/retweetlog', views.retweetlog, name='retweetlog'),
+    url(r'', views.index, name="index"),
+        ]
